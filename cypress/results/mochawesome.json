@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-10T19:12:36.183Z",
+    "end": "2023-12-10T19:12:39.986Z",
+    "duration": 3803,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9d21dc8-caa3-40c3-a598-906359c59a16",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smoke-tests\\home.work.13.spec.ts",
+      "file": "cypress\\e2e\\smoke-tests\\home.work.13.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "70e5963f-70f0-4352-ac22-9d97f893538c",
+          "title": "Home Work",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Drop-down Test 1",
+              "fullTitle": "Home Work Drop-down Test 1",
+              "timedOut": null,
+              "duration": 1471,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/pages');\ncy.get('nb-layout-header nav').should('have.css', 'background-color', colors.Light);\ncy.get(\"button.select-button\").click();\ncy.get('nb-option[ng-reflect-value=\"dark\"]').click();\ncy.get('nb-layout-header nav').should('have.css', 'background-color', colors.Dark);\ncy.get(\"button.select-button\").click();\ncy.get('nb-option[ng-reflect-value=\"cosmic\"]').click();\ncy.get('nb-layout-header nav').should('have.css', 'background-color', colors.Cosmic);\ncy.get(\"button.select-button\").click();\ncy.get('nb-option[ng-reflect-value=\"corporate\"]').click();\ncy.get('nb-layout-header nav').should('have.css', 'background-color', colors.Corporate);",
+              "err": {},
+              "uuid": "ef99a5a8-7b9a-4e40-8216-3b8636f18202",
+              "parentUUID": "70e5963f-70f0-4352-ac22-9d97f893538c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Text Test 2",
+              "fullTitle": "Home Work Text Test 2",
+              "timedOut": null,
+              "duration": 910,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/pages/layout/accordion');\ncy.contains('button', 'Toggle First Item').click();\ncy.get('div.item-body').eq(0).should('be.visible');",
+              "err": {},
+              "uuid": "c390234f-cce8-41a6-a80f-167a8c4fe1bb",
+              "parentUUID": "70e5963f-70f0-4352-ac22-9d97f893538c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hover Test 3",
+              "fullTitle": "Home Work Hover Test 3",
+              "timedOut": null,
+              "duration": 645,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/pages/modal-overlays/popover');\ncy.get('button[nbpopoverplacement=\"right\"]').trigger(\"mouseenter\");\ncy.contains('nb-popover', 'Hello, how are you today?').should('be.visible');",
+              "err": {},
+              "uuid": "06c2cfb5-1ebe-42b7-a31e-2831c05e00a2",
+              "parentUUID": "70e5963f-70f0-4352-ac22-9d97f893538c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Dialog Test 4",
+              "fullTitle": "Home Work Dialog Test 4",
+              "timedOut": null,
+              "duration": 691,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/pages/modal-overlays/dialog');\ncy.get('.result-from-dialog button').click();\ncy.get('input[placeholder=\"Name\"]').should('be.visible');\ncy.get('input[placeholder=\"Name\"]').type(testName);\ncy.get('button.status-success').click();\ncy.get('.result-from-dialog ul li').should('contain', testName);",
+              "err": {},
+              "uuid": "3eb769fe-e0d9-4e53-868d-ef6fbd13cd8e",
+              "parentUUID": "70e5963f-70f0-4352-ac22-9d97f893538c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef99a5a8-7b9a-4e40-8216-3b8636f18202",
+            "c390234f-cce8-41a6-a80f-167a8c4fe1bb",
+            "06c2cfb5-1ebe-42b7-a31e-2831c05e00a2",
+            "3eb769fe-e0d9-4e53-868d-ef6fbd13cd8e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3717,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
